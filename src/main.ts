@@ -1,4 +1,5 @@
 import { sayHello } from './greet';
+import { DashboardController, DashboardOptions } from './dashboard/dashboard';
 
 function showHello(divName: string, name: string) {
     const elt = document.getElementById(divName);
@@ -7,4 +8,18 @@ function showHello(divName: string, name: string) {
 
 showHello("greeting", "TypeScript");
 
+function makeMagicHappen() {
+    const jsonOptions =`
+        {
+            "panels": [
+                {"title" : "First panel"}
+            ] 
+        }`;
+
+    const options = JSON.parse(jsonOptions);
+    let controller = new DashboardController(options);
+    controller.showDashboard();
+}
+
+makeMagicHappen();
 
