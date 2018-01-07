@@ -6,3 +6,5 @@ function showHello(divName: string, name: string) {
 }
 
 showHello("greeting", "TypeScript");
+
+
